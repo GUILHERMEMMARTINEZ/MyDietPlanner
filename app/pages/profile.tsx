@@ -11,6 +11,12 @@ const ProfilePage = () => {
         {/* Formulário para atualizar informações do usuário */}
       </main>
     </div>
+
+<div>
+<main className="container mx-auto p-4">
+</main>
+</div>
+
   );
 };
 
