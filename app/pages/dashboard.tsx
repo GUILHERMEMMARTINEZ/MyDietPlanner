@@ -16,4 +16,6 @@ const DashboardPage = () => {
   );
 };
 
+//comment from Arthur
+
 export default DashboardPage;
