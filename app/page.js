@@ -11,7 +11,7 @@ export default function Home() {
           </Link>
         </nav>
         <div className="font-mono text-sm">
-          <Link href="/week-8">
+          <Link href="/user-page">
             <span className="hover:text-yellow-300 cursor-pointer">Login</span>
           </Link>
         </div>
@@ -54,11 +54,6 @@ export default function Home() {
       </div>
 
       <footer className="fixed bottom-0 w-full bg-gray-800 bg-opacity-80 text-white flex justify-between items-center p-4">
-        <nav className="flex space-x-4 footer-nav">
-          <Link href="/week-7">
-            <span className="hover:text-yellow-300 cursor-pointer">To be Developed</span>
-          </Link>
-        </nav>
         <div className="font-mono text-sm">
           Developed by Art and Gui
         </div>
