@@ -2,17 +2,8 @@
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import DietTable from './DietTable';
-import { Suspense } from 'react';
 
-const SetupDietPage = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <DietSetupContent />
-    </Suspense>
-  );
-};
-
-const DietSetupContent = () => {
+export default function Home() {
   const searchParams = useSearchParams();
   const bmr = searchParams.get('bmr');
   const tdee = searchParams.get('tdee');
@@ -55,6 +46,4 @@ const DietSetupContent = () => {
       </footer>
     </main>
   );
-};
-
-export default SetupDietPage;
+}
