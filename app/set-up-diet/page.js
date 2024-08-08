@@ -1,9 +1,18 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import DietTable from './DietTable';
+import DietTable from '../components/DietTable';
+import { Suspense } from 'react';
 
-export default function Home() {
+const SetupDietPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DietSetupContent />
+    </Suspense>
+  );
+};
+
+const DietSetupContent = () => {
   const searchParams = useSearchParams();
   const bmr = searchParams.get('bmr');
   const tdee = searchParams.get('tdee');
@@ -46,4 +55,6 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+};
+
+export default SetupDietPage;
