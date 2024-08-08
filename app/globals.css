@@ -55,3 +55,48 @@ body {
 .text-hover-dark:hover {
   color: #a9a9a9; 
 }
+
+.panel-primary {
+  border-color: #337ab7;
+}
+
+.panel-heading {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.panel-body {
+  background-color: #2b2b2b;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button-container button {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.button-container button:hover {
+  transform: scale(1.05);
+}
+
+.bg-blue {
+  background-color: #337ab7;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  color: #337ab7;
+}

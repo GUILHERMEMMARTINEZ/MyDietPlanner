@@ -1,7 +1,6 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
-import SelectGoal from './SelectGoal';
 
 export default function PlanYourDiet() {
   const [results, setResults] = useState(null);
@@ -201,15 +200,19 @@ export default function PlanYourDiet() {
             </form>
 
             {results && (
-              <div className="bg-info p-4 mt-4 text-center font-semibold text-lg bg-black text-white rounded-lg">
-                <div>Your Basal Metabolic Rate (BMR): <b className="label label-success">{results.bmr}</b></div>
-                <div>Your Total Daily Energy Expenditure (TDEE): <b className="label label-success">{results.tdee}</b></div>
-              </div>
-            )}
+  <div className="bg-info p-4 mt-4 text-center font-semibold text-lg bg-black text-white rounded-lg">
+    <div>Your Basal Metabolic Rate (BMR): <b className="label label-success">{results.bmr}</b></div>
+    <div>Your Total Daily Energy Expenditure (TDEE): <b className="label label-success">{results.tdee}</b></div>
+    <Link href={`/set-up-diet?bmr=${results.bmr}&tdee=${results.tdee}`}>
+      <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg">
+        Set Up a Diet
+      </button>
+    </Link>
+  </div>
+)}
 
           </div>
         </div>
-        <SelectGoal />
       </div>
 
       
